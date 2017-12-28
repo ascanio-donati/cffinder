@@ -1,0 +1,22 @@
+Inizializzando la classe, il costruttore richiede il percorso del file CSV con all'interno i codici catastali. I metodi son pochi ma buoni (e per elencarli uso un'identità di fantasia :)
+
+GetName: ritorna una stringa con all'interno il nome in CF in maiuscolo
+Es. input(string): Paolo --> output(string): PLA
+
+GetSurname: ritorna una stringa con all'interno il cognome in CF in maiuscolo
+Es. input(string): Alemanno --> output(string): LMN
+
+GetDate: ritorna una stringa con all'interno la data in CF
+Es. input(date): 23 maggio 1981 --> output(string): 81E23
+Purtroppo non essendo stato previsto l'utilizzo pubblico del metodo, avendo creato il programma per altri scopi, finora non c'è un modo per scegliere il sesso senza comporre il CF completo. Quindi qualunque data uscirà sarà sempre di sesso maschile...
+
+GetCity: ritorna una stringa con all'interno la città
+Es. input(string): Bologna --> output(string): A944
+Per ottenere il risultato il programma si basa sul file CSV inizializzato con il costruttore, quindi non è il top del top (paesi recenti o stati esteri possono non essere riconosciuti). Non essendoci una vera e propria gestione degli errori in caso di città non trovata verrà restituito in output "0000"
+
+GetCIN: ritorna il carattere di controllo dati i caratteri precedenti
+Es. input(string): LMNPLA81E23A944 --> output(string): X
+
+GetCF: il più divertente, ovviamente
+Es. input(string Cognome, string Nome, string Sesso, date Data, string Comune):
+Alemanno, Paolo, M, 23 maggio 1981, Bologna --> output(string): LMNPLA81E23A944X
